@@ -35,8 +35,12 @@ class Calc {
   }
 
   /** метод отписки */
-  unsubscribe() {
-    this.subscriptions = [];
+  unsubscribe(fn) {
+    if (!fn) {
+      this.subscriptions = [];
+      return;
+    }
+    this.subscriptions.splice(this.subscriptions.indexOf(fn), 1);
   }
 }
 
