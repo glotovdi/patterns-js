@@ -9,6 +9,7 @@ class Calc {
   constructor() {
     this.result = 0;
     this.subscriptions = [];
+    s;
   }
 
   eventTrigger() {
