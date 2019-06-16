@@ -8,6 +8,7 @@
 class Calc {
   constructor() {
     this.result = 0;
+    /** массив подписчиков */
     this.subscriptions = [];
   }
 
@@ -27,9 +28,15 @@ class Calc {
     this.eventTrigger();
   }
 
+  /** метод добавляющий подписку к подписчикам */
   subscribe(fn) {
     // TODO
     this.subscriptions.push(fn);
+  }
+
+  /** метод отписки */
+  unsubscribe() {
+    this.subscriptions = [];
   }
 }
 
